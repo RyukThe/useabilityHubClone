@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Usability clone</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaQuaries.css">
 </head>
 <body>
 
@@ -21,7 +22,7 @@
             <a href="#" class="company-logo">
                 <img src="./assets/asset 1.png" alt="company logo">
             </a>
-            <div class="nav-links">
+            <div class="nav-links " id="nav-links" >
                 <ul class="flex">
                     <li><a href="#" class="hover-link">Products</a></li>
                     <li><a href="#" class="hover-link">Customers</a></li>
@@ -31,6 +32,9 @@
                     <li><a href="#" class="hover-link primary-button">Sign up</a></li>
                 </ul>
             </div>
+            <a href="#" class="nav-toggle hover-link" id="toggle-button">
+                <i class="fa-solid fa-bars"></i>
+            </a>
         </div>
     </nav>
     <header>
@@ -130,7 +134,7 @@
         </div>
     </section>
     <section class="big-features-section">
-        <div class="container flex big-features-container" style="flex-direction: row-reverse;">
+        <div class="container flex big-features-container" id="big-feature-2img">
             <div class="big-feature-image">
 
                 <img src="./assets/asset 21.png" alt="">
@@ -248,6 +252,14 @@
         </div>
     </div>
 
+   
     <script src="https://kit.fontawesome.com/dc1458db15.js" crossorigin="anonymous"></script>
+    <script>
+        const toggleButton=document.getElementById('toggle-button');
+        const navLinks= document.getElementById('nav-links');
+        toggleButton.addEventListener('click', ()=>{
+            navLinks.classList.toggle('active');
+        })
+    </script>
 </body>
 </html>
